@@ -16,6 +16,15 @@ if (navigator.serviceWorker) {
 /**
  * This function displays an alert.
  */
-function myButtonClicked() {
-  document.getElementById("hello-world").innerHTML = "<p>Hello, World!</p>"
+function cookieClicked() {
+  if (localStorage.cookiesClicked ) {
+    //localStorage.cookiesClicked = 1
+    localStorage.cookiesClicked = localStorage.cookiesClicked++
+    
+  } 
+  else {
+    localStorage.cookiesClicked = 1
+  }
+     
+    document.getElementById("output").innerHTML = localStorage.cookiesClicked
 }
