@@ -15,16 +15,16 @@ if (navigator.serviceWorker) {
 
 /**
  * This function adds 1 to the counter every time you click the cookie. The counter is saved to local storage.
- */ 
+ */
 function cookieClicked() {
   //if cookies clicked exists, then...
   if (localStorage.cookiesClicked) {
     localStorage.cookiesClicked++
-  } 
-  else {
+  } else {
     //cookies clicked does not exist create cookies clicked
     localStorage.cookiesClicked = 0
   }
   //output cookies clicked
-  document.getElementById("output").innerHTML = "You have clicked the cookie " + localStorage.cookiesClicked + " times."
+  document.getElementById("output").innerHTML =
+    "You have clicked the cookie " + localStorage.cookiesClicked + " times."
 }
